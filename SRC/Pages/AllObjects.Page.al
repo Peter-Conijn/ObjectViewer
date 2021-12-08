@@ -145,7 +145,7 @@ page 50130 "PCO All Objects"
             action(RunReports)
             {
                 ApplicationArea = All;
-                Caption = 'Run Reports';
+                Caption = 'Show Reports';
                 Image = Report;
                 Promoted = true;
                 PromotedCategory = New;
