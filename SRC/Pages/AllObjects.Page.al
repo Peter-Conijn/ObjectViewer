@@ -1,6 +1,6 @@
 page 50130 "PCO All Objects"
 {
-    Caption = 'Object Management';
+    Caption = 'Object Viewer';
     PageType = List;
     UsageCategory = Lists;
     ApplicationArea = All;
