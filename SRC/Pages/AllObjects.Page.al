@@ -1,4 +1,4 @@
-page 50130 "PCO All Objects"
+page 50130 "PCO Object Viewer"
 {
     Caption = 'Object Viewer';
     PageType = List;
@@ -49,13 +49,6 @@ page 50130 "PCO All Objects"
                     Caption = 'App Name';
                     ToolTip = 'Specifies the name of the name of the app that the object belongs to.';
                 }
-                field("App Package ID"; Rec."App Package ID")
-                {
-                    ApplicationArea = All;
-                    ToolTip = 'Specifies the type of the object.';
-                    Visible = false;
-                }
-
             }
         }
     }
@@ -162,10 +155,18 @@ page 50130 "PCO All Objects"
 
     local procedure GetAppPackageName(): Text
     var
+        NAVAppInstalledApp: Record "NAV App Installed App";
+        InsufficientReadPermissionsMsg: Label 'Insufficient read permissions.';
+        UnknownAppMsg: Label '--- Unknown ---';
         AppInfo: ModuleInfo;
     begin
-        if NavApp.GetModuleInfo(Rec."App Package ID", AppInfo) then
-            exit(AppInfo.Name);
+        if not NAVAppInstalledApp.ReadPermission() then
+            exit(InsufficientReadPermissionsMsg);
+        NAVAppInstalledApp.SetRange("Package ID", Rec."App Package ID");
+        if NAVAppInstalledApp.FindFirst() then
+            if NavApp.GetModuleInfo(NAVAppInstalledApp."App ID", AppInfo) then
+                exit(AppInfo.Name);
+        exit(UnknownAppMsg);
     end;
 
     local procedure GetObjectType(ObjectTypeOption: Option): ObjectType
