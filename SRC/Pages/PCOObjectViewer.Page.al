@@ -169,26 +169,10 @@ page 50130 "PCO Object Viewer"
         exit(UnknownAppMsg);
     end;
 
-    local procedure GetObjectType(ObjectTypeOption: Option): ObjectType
-    begin
-        case ObjectTypeOption of
-            Rec."Object Type"::Table:
-                exit(ObjectType::Table);
-            Rec."Object Type"::Page:
-                exit(ObjectType::Page);
-            Rec."Object Type"::Codeunit:
-                exit(ObjectType::Codeunit);
-            Rec."Object Type"::Report:
-                exit(ObjectType::Report);
-        end;
-    end;
-
     local procedure RunApplicationObject()
     var
-        Url: Text;
+        PCOIObjectManagement: Codeunit "PCO IObjectManagement";
     begin
-        Url := GetUrl(ClientType::Web, CompanyName(), GetObjectType(Rec."Object Type"), Rec."Object ID");
-        if Url <> '' then
-            Hyperlink(Url);
+        PCOIObjectManagement.RunApplicationObject(Rec);
     end;
 }
