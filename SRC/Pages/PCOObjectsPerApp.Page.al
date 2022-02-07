@@ -6,6 +6,7 @@ page 50131 "PCO Objects per App"
     UsageCategory = Lists;
     DataCaptionFields = Name;
     SourceTable = "NAV App Installed App";
+    DataCaptionExpression = Rec.Name;
     InsertAllowed = false;
     ModifyAllowed = false;
     DeleteAllowed = false;
