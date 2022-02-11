@@ -1,5 +1,17 @@
 codeunit 50132 "OVW Comparison Management"
 {
+    internal procedure GenerateObjectData()
+    var
+        AllObj: Record AllObj;
+    begin
+        if not AllObj.FindSet() then
+            exit;
+
+        repeat
+            InsertObjectData(AllObj)
+        until AllObj.Next() = 0;
+    end;
+
     internal procedure ExportData(TypeFilter: Text)
     var
         OVWObjectComparison: Record "OVW Object Comparison";
