@@ -1,4 +1,4 @@
-page 50130 "PCO Object Viewer"
+page 50130 "OVW Object Viewer"
 {
     Caption = 'Object Viewer';
     PageType = List;
@@ -171,7 +171,7 @@ page 50130 "PCO Object Viewer"
 
     local procedure RunApplicationObject()
     var
-        PCOIObjectManagement: Codeunit "PCO IObjectManagement";
+        PCOIObjectManagement: Codeunit "OVW IObjectManagement";
     begin
         PCOIObjectManagement.RunApplicationObject(Rec);
     end;

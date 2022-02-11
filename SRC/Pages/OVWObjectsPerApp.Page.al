@@ -1,4 +1,4 @@
-page 50131 "PCO Objects per App"
+page 50131 "OVW Objects per App"
 {
     PageType = ListPlus;
     Caption = 'Objects per App';
@@ -36,7 +36,7 @@ page 50131 "PCO Objects per App"
                     }
                 }
             }
-            part(AppObjedcts; "PCO Application Objects")
+            part(AppObjedcts; "OVW Application Objects")
             {
                 ApplicationArea = All;
                 SubPageLink = "App Package ID" = field("Package Id");

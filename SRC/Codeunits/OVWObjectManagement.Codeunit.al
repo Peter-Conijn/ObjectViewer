@@ -1,4 +1,4 @@
-codeunit 50131 "PCO Object Management"
+codeunit 50131 "OVW Object Management"
 {
     Access = Internal;
 

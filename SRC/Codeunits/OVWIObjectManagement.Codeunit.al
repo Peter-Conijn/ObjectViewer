@@ -1,8 +1,8 @@
-codeunit 50130 "PCO IObjectManagement"
+codeunit 50130 "OVW IObjectManagement"
 {
     procedure RunApplicationObject(AllObjWithCaption: Record AllObjWithCaption)
     var
-        PCOObjectManagement: Codeunit "PCO Object Management";
+        PCOObjectManagement: Codeunit "OVW Object Management";
     begin
         PCOObjectManagement.RunApplicationObject(AllObjWithCaption);
     end;

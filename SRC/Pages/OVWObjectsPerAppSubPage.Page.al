@@ -1,4 +1,4 @@
-page 50133 "PCO Application Objects"
+page 50133 "OVW Application Objects"
 {
     PageType = ListPart;
     Caption = 'Application Objects';
@@ -62,7 +62,7 @@ page 50133 "PCO Application Objects"
 
     local procedure RunApplicationObject()
     var
-        PCOIObjectManagement: Codeunit "PCO IObjectManagement";
+        PCOIObjectManagement: Codeunit "OVW IObjectManagement";
     begin
         PCOIObjectManagement.RunApplicationObject(Rec);
     end;

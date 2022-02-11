@@ -1,4 +1,4 @@
-page 50132 "PCO Installed Applications"
+page 50132 "OVW Installed Applications"
 {
     PageType = ListPart;
     Caption = 'Installed Applications';
