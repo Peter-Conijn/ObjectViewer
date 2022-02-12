@@ -3,6 +3,7 @@ xmlport 50130 "OVW Object Data I/O"
     Caption = 'Object Data I/O';
     Format = Xml;
     Encoding = UTF8;
+    UseDefaultNamespace = true;
 
     schema
     {
