@@ -43,4 +43,19 @@ page 50131 "OVW Objects per App"
             }
         }
     }
+
+    actions
+    {
+        area(Processing)
+        {
+            action(CompareObjects)
+            {
+                ApplicationArea = All;
+                Caption = 'Compare Objects';
+                Image = CompareCOA;
+                RunObject = Page "OVW Compare Objects";
+                RunPageOnRec = true;
+            }
+        }
+    }
 }

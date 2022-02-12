@@ -13,6 +13,10 @@ xmlport 50130 "OVW Object Data I/O"
                 textelement(object)
                 {
                     MaxOccurs = Unbounded;
+                    fieldattribute(app; objects."App Name")
+                    {
+                        Occurrence = Required;
+                    }
 
                     fieldelement("type"; objects."Object Type")
                     {
@@ -24,7 +28,7 @@ xmlport 50130 "OVW Object Data I/O"
                         MinOccurs = Once;
                         MaxOccurs = Once;
                     }
-                    fieldelement("name"; objects."Object ID")
+                    fieldelement("name"; objects."Object Name")
                     {
                         MinOccurs = Once;
                         MaxOccurs = Once;

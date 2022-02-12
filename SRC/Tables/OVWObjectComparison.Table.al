@@ -1,6 +1,9 @@
 table 50130 "OVW Object Comparison"
 {
-    DataClassification = ToBeClassified;
+    DataClassification = SystemMetadata;
+    Caption = 'Object Comparison';
+    DrillDownPageId = "OVW Object Comparison";
+    LookupPageId = "OVW Object Comparison";
 
     fields
     {
@@ -24,10 +27,15 @@ table 50130 "OVW Object Comparison"
             DataClassification = SystemMetadata;
             Caption = 'Object Name';
         }
-        field(5; "Object Hash"; Text[1024])
+        field(6; "App Name"; Text[250])
+        {
+            DataClassification = CustomerContent;
+            Caption = 'App Name';
+        }
+        field(7; "Has Counterpart"; Boolean)
         {
             DataClassification = SystemMetadata;
-            Caption = 'Object Hash';
+            Caption = 'Has Counterpart';
         }
     }
 
@@ -37,28 +45,9 @@ table 50130 "OVW Object Comparison"
         {
             Clustered = true;
         }
-        key(Key2; Origin, "Object Hash")
+        key(Key3; Origin, "Has Counterpart")
         {
-            Unique = true;
+            MaintainSiftIndex = false;
         }
     }
-
-    var
-        myInt: Integer;
-
-    trigger OnInsert()
-    begin
-        CreateObjectHash();
-    end;
-
-    local procedure CreateObjectHash()
-    var
-        CryptographyManagement: Codeunit "Cryptography Management";
-        HashInputLbl: Label '%1-%2-%3', Locked = true;
-        HashInput: Text;
-    begin
-        HashInput := StrSubstNo(HashInputLbl, "Object Type", "Object ID", "Object Name");
-        "Object Hash" := CryptographyManagement.GenerateHash(HashInput, 0);
-    end;
-
 }
