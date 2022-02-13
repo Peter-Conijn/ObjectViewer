@@ -45,7 +45,7 @@ table 50130 "OVW Object Comparison"
         {
             Clustered = true;
         }
-        key(Key3; Origin, "Has Counterpart")
+        key(Key3; Origin, "Object Type", "Has Counterpart")
         {
             MaintainSiftIndex = false;
         }

@@ -51,16 +51,32 @@ codeunit 50132 "OVW Comparison Management"
         OVWObjectDataIO.Import();
     end;
 
-    internal procedure RunComparison()
+    internal procedure GetNoOfObjects(OVWOrigin: Enum "OVW Origin"): Integer
+    var
+        OVWObjectComparison: Record "OVW Object Comparison";
     begin
+        OVWObjectComparison.SetRange(Origin, OVWOrigin);
+        exit(OVWObjectComparison.Count());
+    end;
+
+    internal procedure RunComparison()
+    var
+        DialogTextLbl: Label 'Comparing objects...\Old->New: #1# of #2# \New -> Old: #3# of #4# ', Comment = '#1 = Current index existing; #2 = Total; #3 = Current index new; #4 = Total;';
+    begin
+        OpenDialog(DialogTextLbl);
+
         RunComparison(Enum::"OVW Origin"::Generated);
         RunComparison(Enum::"OVW Origin"::Imported);
+
+        CloseDialog();
     end;
 
     local procedure RunComparison(OVWOrigin: Enum "OVW Origin")
     var
         OVWObjectComparison: Record "OVW Object Comparison";
         CounterpartOVWOrigin: Enum "OVW Origin";
+        DialogControlToUpdate: Integer;
+        Index: Integer;
     begin
         OVWObjectComparison.ModifyAll("Has Counterpart", false);
         if OVWOrigin = Enum::"OVW Origin"::Generated then
@@ -68,10 +84,13 @@ codeunit 50132 "OVW Comparison Management"
         else
             CounterpartOVWOrigin := Enum::"OVW Origin"::Generated;
 
+        DialogControlToUpdate := GetDialogControlToUpdate(OVWOrigin);
         OVWObjectComparison.SetRange(Origin, OVWOrigin);
         if OVWObjectComparison.FindSet() then
             repeat
+                Index += 1;
                 FindCounterPart(OVWObjectComparison, CounterpartOVWOrigin);
+                UpdateDialog(DialogControlToUpdate, Index, false);
             until OVWObjectComparison.Next() = 0;
 
     end;
@@ -115,4 +134,51 @@ codeunit 50132 "OVW Comparison Management"
         OVWObjectComparison.Modify(true);
         OVWObjectComparison2.Modify(true);
     end;
+
+    local procedure OpenDialog(DialogText: Text)
+    begin
+        if not GuiAllowed() then
+            exit;
+
+        DialogWindow.Open(DialogText);
+
+        UpdateDialog(1, 0, true);
+        UpdateDialog(2, GetNoOfObjects(Enum::"OVW Origin"::Generated), true);
+        UpdateDialog(3, 0, true);
+        UpdateDialog(4, GetNoOfObjects(Enum::"OVW Origin"::Imported), true);
+    end;
+
+    local procedure UpdateDialog(ControlNo: Integer; NewValue: Integer; ForceUpdate: Boolean)
+    begin
+        if LastUpdate = 0T then
+            LastUpdate := Time();
+        if (Time() - LastUpdate < 1000) then
+            if not ForceUpdate then
+                exit;
+
+        DialogWindow.Update(ControlNo, NewValue);
+        SetLastUpdate();
+    end;
+
+    local procedure CloseDialog()
+    begin
+        if GuiAllowed() then
+            DialogWindow.Close();
+    end;
+
+    local procedure SetLastUpdate()
+    begin
+        LastUpdate := Time();
+    end;
+
+    local procedure GetDialogControlToUpdate(OVWOrigin: Enum "OVW Origin"): Integer;
+    begin
+        if OVWOrigin = OVWOrigin::Generated then
+            exit(1);
+        exit(3);
+    end;
+
+    var
+        DialogWindow: Dialog;
+        LastUpdate: Time;
 }

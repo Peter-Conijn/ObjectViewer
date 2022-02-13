@@ -44,6 +44,18 @@ page 50134 "OVW Compare Objects"
                             ShowObjects(Enum::"OVW Origin"::Generated, Enum::"OVW Object Type"::Table);
                         end;
                     }
+                    field(RemovedPages; GetNoOfObjectsWithoutCounterPart(Enum::"OVW Origin"::Generated, Enum::"OVW Object Type"::Page))
+                    {
+                        Caption = 'Removed Pages';
+                        ToolTip = 'Specifies the number of pages the generated data that do not exist in the imported data.';
+                        ApplicationArea = All;
+                        Editable = false;
+
+                        trigger OnDrillDown()
+                        begin
+                            ShowObjects(Enum::"OVW Origin"::Generated, Enum::"OVW Object Type"::Table);
+                        end;
+                    }
                 }
                 group(ImportedData)
                 {
@@ -55,7 +67,7 @@ page 50134 "OVW Compare Objects"
                         ApplicationArea = All;
                         Editable = false;
                     }
-                    field(NewTables; GetNoOfObjectsWithoutCounterPart(Enum::"OVW Origin"::Generated, Enum::"OVW Object Type"::Table))
+                    field(NewTables; GetNoOfObjectsWithoutCounterPart(Enum::"OVW Origin"::Imported, Enum::"OVW Object Type"::Table))
                     {
                         Caption = 'New Tables';
                         ToolTip = 'Specifies the number of tables the imported data that do not exist in the generated data.';
@@ -65,6 +77,18 @@ page 50134 "OVW Compare Objects"
                         trigger OnDrillDown()
                         begin
                             ShowObjects(Enum::"OVW Origin"::Imported, Enum::"OVW Object Type"::Table);
+                        end;
+                    }
+                    field(NewPages; GetNoOfObjectsWithoutCounterPart(Enum::"OVW Origin"::Imported, Enum::"OVW Object Type"::Page))
+                    {
+                        Caption = 'New Pages';
+                        ToolTip = 'Specifies the number of pages the imported data that do not exist in the generated data.';
+                        ApplicationArea = All;
+                        Editable = false;
+
+                        trigger OnDrillDown()
+                        begin
+                            ShowObjects(Enum::"OVW Origin"::Imported, Enum::"OVW Object Type"::Page);
                         end;
                     }
                 }
@@ -166,17 +190,16 @@ page 50134 "OVW Compare Objects"
 
     local procedure GetNoOfObjects(OVWOrigin: Enum "OVW Origin"): Integer
     var
-        OVWObjectComparison: Record "OVW Object Comparison";
+        OVWComparisonManagement: Codeunit "OVW Comparison Management";
     begin
-        OVWObjectComparison.SetRange(Origin, OVWOrigin);
-        exit(OVWObjectComparison.Count());
+        exit(OVWComparisonManagement.GetNoOfObjects(OVWOrigin));
     end;
 
     local procedure GetNoOfObjectsWithoutCounterPart(OVWOrigin: Enum "OVW Origin"; OVWObjectType: Enum "OVW Object Type"): Integer
     var
         OVWObjectComparison: Record "OVW Object Comparison";
     begin
-        SetCounterpartFilters(OVWOrigin, OVWObjectComparison);
+        SetCounterpartFilters(OVWOrigin, OVWObjectType, OVWObjectComparison);
         exit(OVWObjectComparison.Count());
     end;
 
@@ -190,14 +213,15 @@ page 50134 "OVW Compare Objects"
     var
         OVWObjectComparison: Record "OVW Object Comparison";
     begin
-        SetCounterpartFilters(OVWOrigin, OVWObjectComparison);
+        SetCounterpartFilters(OVWOrigin, OVWObjectType, OVWObjectComparison);
         Page.Run(Page::"OVW Object Comparison", OVWObjectComparison);
     end;
 
-    local procedure SetCounterpartFilters(OVWOrigin: Enum "OVW Origin"; var OVWObjectComparison: Record "OVW Object Comparison")
+    local procedure SetCounterpartFilters(OVWOrigin: Enum "OVW Origin"; OVWObjectType: Enum "OVW Object Type"; var OVWObjectComparison: Record "OVW Object Comparison")
     begin
-        OVWObjectComparison.SetCurrentKey(Origin, "Has Counterpart");
+        OVWObjectComparison.SetCurrentKey(Origin, "Object Type", "Has Counterpart");
         OVWObjectComparison.SetRange(Origin, OVWOrigin);
+        OVWObjectComparison.SetRange("Object Type", OVWObjectType);
         OVWObjectComparison.SetRange("Has Counterpart", false);
     end;
 

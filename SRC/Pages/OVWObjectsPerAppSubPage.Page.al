@@ -62,8 +62,8 @@ page 50133 "OVW Application Objects"
 
     local procedure RunApplicationObject()
     var
-        PCOIObjectManagement: Codeunit "OVW IObjectManagement";
+        PCOObjectManagement: Codeunit "OVW Object Management";
     begin
-        PCOIObjectManagement.RunApplicationObject(Rec);
+        PCOObjectManagement.RunApplicationObject(Rec);
     end;
 }
