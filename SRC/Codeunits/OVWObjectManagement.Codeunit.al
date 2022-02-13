@@ -2,7 +2,6 @@ codeunit 50131 "OVW Object Management"
 {
     Access = Internal;
 
-    [ErrorBehavior(ErrorBehavior::Collect)]
     internal procedure RunApplicationObject(AllObjWithCaption: Record AllObjWithCaption)
     var
         Url: Text;
@@ -38,15 +37,8 @@ codeunit 50131 "OVW Object Management"
 
     local procedure GenerateError(AllObjWithCaption: Record AllObjWithCaption)
     var
-        NewErrorInfo: ErrorInfo;
+        HyperlinkFailedErr: Label 'Hyperlinking to the selected object failed. Please see the message for more information.';
     begin
-        NewErrorInfo := ErrorInfo.Create(GetLastErrorText());
-        NewErrorInfo.Collectible := true;
-        NewErrorInfo.DataClassification := DataClassification::SystemMetadata;
-        NewErrorInfo.RecordId := AllObjWithCaption.RecordId();
-        NewErrorInfo.Verbosity := Verbosity::Error;
-        NewErrorInfo.DetailedMessage := 'Hyperlinking to the selected object failed. Please see the message for more information.';
-
-        Error(NewErrorInfo);
+        Error(HyperlinkFailedErr);
     end;
 }
