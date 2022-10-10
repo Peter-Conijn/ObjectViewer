@@ -53,7 +53,7 @@ page 50134 "OVW Compare Objects"
 
                         trigger OnDrillDown()
                         begin
-                            ShowObjects(Enum::"OVW Origin"::Generated, Enum::"OVW Object Type"::Table);
+                            ShowObjects(Enum::"OVW Origin"::Generated, Enum::"OVW Object Type"::Page);
                         end;
                     }
                 }
