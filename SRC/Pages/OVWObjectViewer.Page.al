@@ -49,6 +49,14 @@ page 50130 "OVW Object Viewer"
                     Caption = 'App Name';
                     ToolTip = 'Specifies the name of the name of the app that the object belongs to.';
                 }
+                field(RecordCount; GetRecordCount(Rec."Object Type", Rec."Object ID"))
+                {
+                    ApplicationArea = All;
+                    Caption = 'Record Count';
+                    ToolTip = 'Specifies the number of records in the table for the current company.';
+                    BlankZero = true;
+                    Editable = false;
+                }
             }
         }
     }
@@ -174,5 +182,14 @@ page 50130 "OVW Object Viewer"
         PCOObjectManagement: Codeunit "OVW Object Management";
     begin
         PCOObjectManagement.RunApplicationObject(Rec);
+    end;
+
+    local procedure GetRecordCount(ForObjectType: Option; ForObjectID: Integer): Integer
+    var
+        OVWRecordCountMgt: Codeunit "OVW Record Count Mgt.";
+    begin
+        if ForObjectType <> Rec."Object Type"::Table then
+            exit;
+        exit(OVWRecordCountMgt.GetRecordCount(ForObjectID));
     end;
 }

@@ -34,6 +34,14 @@ page 50133 "OVW Application Objects"
                     ApplicationArea = All;
                     ToolTip = 'Specifies the language-specific caption of the object.';
                 }
+                field(RecordCount; GetRecordCount(Rec."Object Type", Rec."Object ID"))
+                {
+                    ApplicationArea = All;
+                    Caption = 'Record Count';
+                    ToolTip = 'Specifies the number of records in the table for the current company.';
+                    BlankZero = true;
+                    Editable = false;
+                }
             }
         }
     }
@@ -47,10 +55,6 @@ page 50133 "OVW Application Objects"
                 ApplicationArea = All;
                 Caption = 'Run Object';
                 Image = Start;
-                Promoted = true;
-                PromotedCategory = Process;
-                PromotedIsBig = true;
-                PromotedOnly = true;
 
                 trigger OnAction();
                 begin
@@ -65,5 +69,14 @@ page 50133 "OVW Application Objects"
         PCOObjectManagement: Codeunit "OVW Object Management";
     begin
         PCOObjectManagement.RunApplicationObject(Rec);
+    end;
+
+    local procedure GetRecordCount(ForObjectType: Option; ForObjectID: Integer): Integer
+    var
+        OVWRecordCountMgt: Codeunit "OVW Record Count Mgt.";
+    begin
+        if ForObjectType <> Rec."Object Type"::Table then
+            exit;
+        exit(OVWRecordCountMgt.GetRecordCount(ForObjectID));
     end;
 }
