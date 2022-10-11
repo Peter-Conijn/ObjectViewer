@@ -7,6 +7,7 @@ page 50133 "OVW Application Objects"
     InsertAllowed = false;
     ModifyAllowed = false;
     DeleteAllowed = false;
+    Permissions = tabledata AllObjWithCaption = r;
 
     layout
     {
