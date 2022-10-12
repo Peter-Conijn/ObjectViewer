@@ -10,19 +10,10 @@ codeunit 50134 "OVW Permission Set Generator"
     local procedure GenerateAndDownloadPermissionSet(NAVAppInstalledApp: Record "NAV App Installed App")
     var
         TempBlob: Codeunit "Temp Blob";
-        ReadStream: InStream;
-        WriteStream: OutStream;
         PermissionXml: XmlDocument;
-        Filename: Text;
     begin
         PermissionXml := GeneratePermissionSet(NAVAppInstalledApp);
-
-        TempBlob.CreateOutStream(WriteStream);
-        PermissionXml.WriteTo(WriteStream);
-        TempBlob.CreateInStream(ReadStream);
-
-        Filename := GetFilename(NAVAppInstalledApp);
-        DownloadFromStream(ReadStream, '', '', '', Filename);
+        DownloadPermissionSet(NAVAppInstalledApp, PermissionXml);
     end;
 
     local procedure GeneratePermissionSet(NAVAppInstalledApp: Record "NAV App Installed App") PermissionXml: XmlDocument;
@@ -139,17 +130,17 @@ codeunit 50134 "OVW Permission Set Generator"
         exit(Format(ValueToFormat, 0, 9));
     end;
 
-    local procedure GetFilename(NAVAppInstalledApp: Record "NAV App Installed App"): Text
-    var
-        PermissionSetFilenameTxt: Label 'PermissionSet_%1_%2.%3.%4.%5.xml', Locked = true;
-    begin
-        exit(StrSubstNo(PermissionSetFilenameTxt, NAVAppInstalledApp.Name, NAVAppInstalledApp."Version Major", NAVAppInstalledApp."Version Minor", NAVAppInstalledApp."Version Build", NAVAppInstalledApp."Version Revision"));
-    end;
-
     local procedure AddAttribute(var Element: XmlElement; AttributeName: Text; AttributeValue: Text)
     begin
         if AttributeName = '' then
             exit;
         Element.Add(XmlAttribute.Create(AttributeName, AttributeValue));
+    end;
+
+    local procedure DownloadPermissionSet(NAVAppInstalledApp: Record "NAV App Installed App"; PermissionXml: XmlDocument)
+    var
+        OVWDownloadHandler: Codeunit "OVW Download Handler";
+    begin
+        OVWDownloadHandler.DownloadPermissionSet(NAVAppInstalledApp, PermissionXml);
     end;
 }
