@@ -53,6 +53,8 @@ page 50131 "OVW Objects per App"
                 ApplicationArea = All;
                 Caption = 'Compare Objects';
                 Image = CompareCOA;
+                ToolTip = 'Opens the object comparison screen which enables you to import and compare objects of two different versions.';
+                Ellipsis = true;
                 RunObject = Page "OVW Compare Objects";
                 RunPageOnRec = true;
             }
@@ -66,6 +68,7 @@ page 50131 "OVW Objects per App"
                     ApplicationArea = All;
                     Caption = 'Generate Permission Set';
                     Image = Permission;
+                    ToolTip = 'Generate a legacy permission set for this app. Legacy permission sets are used in Business Central versions up to and including Business Central 2020 release wave 2.';
 
                     trigger OnAction()
                     var
@@ -80,6 +83,7 @@ page 50131 "OVW Objects per App"
                     ApplicationArea = All;
                     Caption = 'Generate Tenant Permission Set';
                     Image = Permission;
+                    ToolTip = 'Generate a tenant permission set for this app. Tenant permission sets are used in Business Central 2021 release wave 1 and later versions.';
 
                     trigger OnAction()
                     var
