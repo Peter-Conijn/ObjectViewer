@@ -5,6 +5,7 @@ codeunit 50133 "OVW Record Count Mgt."
         RecRef: RecordRef;
     begin
         RecRef.Open(TableId);
-        exit(RecRef.Count);
+        if RecRef.ReadPermission() then
+            exit(RecRef.Count);
     end;
 }
