@@ -56,18 +56,38 @@ page 50131 "OVW Objects per App"
                 RunObject = Page "OVW Compare Objects";
                 RunPageOnRec = true;
             }
-            action(GeneratePermissionSet)
+            group(PermissionsSetsGroup)
             {
-                ApplicationArea = All;
-                Caption = 'Generate Permission Set';
+                Caption = 'Permission Sets';
                 Image = Permission;
 
-                trigger OnAction()
-                var
-                    OVWPermissionSetGenerator: Codeunit "OVW Permission Set Generator";
-                begin
-                    OVWPermissionSetGenerator.Run(Rec);
-                end;
+                action(GeneratePermissionSet)
+                {
+                    ApplicationArea = All;
+                    Caption = 'Generate Permission Set';
+                    Image = Permission;
+
+                    trigger OnAction()
+                    var
+                        OVWPermissionSetGenerator: Codeunit "OVW Permission Set Generator";
+                    begin
+                        OVWPermissionSetGenerator.Run(Rec);
+                    end;
+                }
+
+                action(GenerateTenantPermissionSet)
+                {
+                    ApplicationArea = All;
+                    Caption = 'Generate Tenant Permission Set';
+                    Image = Permission;
+
+                    trigger OnAction()
+                    var
+                        OVWTenantPermSetGenerator: Codeunit "OVW Tenant Perm. Set Generator";
+                    begin
+                        OVWTenantPermSetGenerator.Run(Rec);
+                    end;
+                }
             }
         }
     }
