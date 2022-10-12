@@ -127,7 +127,7 @@ codeunit 50134 "OVW Permission Set Generator"
 
     local procedure FormatValueAsXml(ValueToFormat: Variant): Text
     begin
-        exit(Format(ValueToFormat, 0, 9));
+        exit(Format(ValueToFormat, 0, 2));
     end;
 
     local procedure AddAttribute(var Element: XmlElement; AttributeName: Text; AttributeValue: Text)
