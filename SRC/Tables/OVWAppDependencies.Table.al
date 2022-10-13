@@ -1,4 +1,4 @@
-table 50131 "OVW App Dependencies"
+table 50131 "OVW App Dependency"
 {
     DataClassification = SystemMetadata;
     Access = Internal;

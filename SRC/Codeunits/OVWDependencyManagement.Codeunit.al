@@ -1,7 +1,7 @@
 codeunit 50137 "OVW Dependency Management"
 {
     Permissions = tabledata "NAV App Installed App" = r,
-                  tabledata "OVW App Dependencies" = rimd;
+                  tabledata "OVW App Dependency" = rimd;
 
     trigger OnRun()
     begin
@@ -36,7 +36,7 @@ codeunit 50137 "OVW Dependency Management"
 
     local procedure InitDependencyRecord(NAVAppInstalledApp: Record "NAV App Installed App"; ModuleDependency: ModuleDependencyInfo)
     var
-        OVWAppDependencies: Record "OVW App Dependencies";
+        OVWAppDependencies: Record "OVW App Dependency";
     begin
         OVWAppDependencies.Init();
         OVWAppDependencies."App Id" := NAVAppInstalledApp."App ID";
@@ -58,7 +58,7 @@ codeunit 50137 "OVW Dependency Management"
 
     local procedure ClearDependencyTable()
     var
-        OVWAppDependencies: Record "OVW App Dependencies";
+        OVWAppDependencies: Record "OVW App Dependency";
     begin
         if not OVWAppDependencies.IsEmpty() then
             OVWAppDependencies.DeleteAll(true);
