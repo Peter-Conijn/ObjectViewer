@@ -25,6 +25,10 @@
     "allowDownloadingSource": false,
     "includeSourceInSymbolFile": false
   },
-  "features": ["NoImplicitWith"],
+  "features": 
+    [
+      "NoImplicitWith",
+      "TranslationFile"
+    ],
   "runtime": "8.0"
 }
