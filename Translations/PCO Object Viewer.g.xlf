@@ -1,0 +1,494 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 xliff-core-1.2-transitional.xsd">
+  <file datatype="xml" source-language="en-US" target-language="en-US" original="PCO Object Viewer">
+    <body>
+      <group id="body">
+        <trans-unit id="Table 1999688140 - Field 3834798520 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>App Id</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table OVW App Dependency - Field App Id - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 1999688140 - Field 1256520770 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>App Name</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table OVW App Dependency - Field App Name - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 1999688140 - Field 1606374689 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>App Publisher</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table OVW App Dependency - Field App Publisher - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 1999688140 - Field 1818719351 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Dependent App ID</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table OVW App Dependency - Field Dependent App Id - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 1999688140 - Field 3006612753 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Dependent App Name</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table OVW App Dependency - Field Dependent App Name - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 1999688140 - Field 3720240218 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Dependent App Publisher</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table OVW App Dependency - Field Dependent App Publisher - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 2383488142 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Object Comparison</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table OVW Object Comparison - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 2383488142 - Field 1256520770 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>App Name</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table OVW Object Comparison - Field App Name - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 2383488142 - Field 1117272883 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Has Counterpart</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table OVW Object Comparison - Field Has Counterpart - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 2383488142 - Field 3711240756 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Object Number</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table OVW Object Comparison - Field Object ID - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 2383488142 - Field 1418569422 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Object Name</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table OVW Object Comparison - Field Object Name - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 2383488142 - Field 1085746399 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Object Type</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table OVW Object Comparison - Field Object Type - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 2383488142 - Field 2588654952 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Origin</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table OVW Object Comparison - Field Origin - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 52229280 - Method 1047572790 - NamedType 1385588473" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Missing app name.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit OVW Comparison Management - Method InsertObjectData - NamedType MissingAppNameErr</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 52229280 - Method 2292941996 - NamedType 2005792921" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Comparing objects...\Old-&gt;New: #1# of #2# \New -&gt; Old: #3# of #4# </source>
+          <note from="Developer" annotates="general" priority="2">#1 = Current index existing; #2 = Total; #3 = Current index new; #4 = Total;</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit OVW Comparison Management - Method RunComparison - NamedType DialogTextLbl</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 2934209892 - Method 3217213821 - NamedType 2240233484" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Hyperlinking to the selected object failed. Please see the message for more information.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit OVW Object Management - Method GenerateError - NamedType HyperlinkFailedErr</note>
+        </trans-unit>
+        <trans-unit id="Page 3525107830 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Application Objects</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page OVW Application Objects - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 3525107830 - Control 3811799877 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the language-specific caption of the object.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page OVW Application Objects - Control Object Caption - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 3525107830 - Control 3711240756 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the ID of the object.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page OVW Application Objects - Control Object ID - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 3525107830 - Control 1418569422 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the name of the object.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page OVW Application Objects - Control Object Name - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 3525107830 - Control 1085746399 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the type of the object.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page OVW Application Objects - Control Object Type - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 3525107830 - Control 1736541834 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the number of records in the table for the current company.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page OVW Application Objects - Control RecordCount - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 3525107830 - Control 1736541834 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Record Count</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page OVW Application Objects - Control RecordCount - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 3525107830 - Action 1570166248 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Run Object</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page OVW Application Objects - Action RunObject - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 3975856121 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Compare Objects</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page OVW Compare Objects - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 3975856121 - Control 947627241 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Generated Data</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page OVW Compare Objects - Control GeneratedData - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 3975856121 - Control 613083843 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the total number of objects in the generated data.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page OVW Compare Objects - Control NoOfGeneratedObjects - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 3975856121 - Control 613083843 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Total No. of Objects</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page OVW Compare Objects - Control NoOfGeneratedObjects - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 3975856121 - Control 875655262 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the number of pages the generated data that do not exist in the imported data.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page OVW Compare Objects - Control RemovedPages - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 3975856121 - Control 875655262 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Removed Pages</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page OVW Compare Objects - Control RemovedPages - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 3975856121 - Control 3598637321 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the number of tables the generated data that do not exist in the imported data.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page OVW Compare Objects - Control RemovedTables - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 3975856121 - Control 3598637321 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Removed Tables</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page OVW Compare Objects - Control RemovedTables - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 3975856121 - Control 2345709640 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Imported Data</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page OVW Compare Objects - Control ImportedData - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 3975856121 - Control 1884496864 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the number of pages the imported data that do not exist in the generated data.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page OVW Compare Objects - Control NewPages - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 3975856121 - Control 1884496864 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>New Pages</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page OVW Compare Objects - Control NewPages - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 3975856121 - Control 408914739 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the number of tables the imported data that do not exist in the generated data.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page OVW Compare Objects - Control NewTables - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 3975856121 - Control 408914739 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>New Tables</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page OVW Compare Objects - Control NewTables - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 3975856121 - Control 2755151294 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Total No. of Objects</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page OVW Compare Objects - Control NoOfImportedObjects - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 3975856121 - Control 1256520770 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the value of the App Name field.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page OVW Compare Objects - Control App Name - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 3975856121 - Control 1256520770 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>App Name</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page OVW Compare Objects - Control App Name - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 3975856121 - Action 4259892921 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Compare the imported data to the generated data.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page OVW Compare Objects - Action CompareData - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 3975856121 - Action 4259892921 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Compare Data</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page OVW Compare Objects - Action CompareData - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 3975856121 - Action 3737775272 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Export the objects for this app to an xml file.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page OVW Compare Objects - Action ExportData - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 3975856121 - Action 3737775272 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Export Data</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page OVW Compare Objects - Action ExportData - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 3975856121 - Action 895433757 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Generate the list of objects for the current app.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page OVW Compare Objects - Action GenerateData - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 3975856121 - Action 895433757 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Generate Data</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page OVW Compare Objects - Action GenerateData - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 3975856121 - Action 15074807 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Import the xml file with the objects to compare to this app.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page OVW Compare Objects - Action ImportData - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 3975856121 - Action 15074807 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Import Data</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page OVW Compare Objects - Action ImportData - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 1830290405 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Depended On By</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page OVW Depended On By - Factbox - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 1830290405 - Control 1256520770 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the value of the App Name field.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page OVW Depended On By - Factbox - Control App Name - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 1830290405 - Control 1606374689 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the value of the App Publisher field.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page OVW Depended On By - Factbox - Control App Publisher - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 955426030 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Depends On</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page OVW Depends On - Factbox - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 955426030 - Control 3006612753 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the value of the Dependent App Name field.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page OVW Depends On - Factbox - Control Dependent App Name - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 955426030 - Control 3720240218 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the value of the Dependent App Publisher field.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page OVW Depends On - Factbox - Control Dependent App Publisher - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 2712471937 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Installed Applications</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page OVW Installed Applications - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 2712471937 - Control 2946036817 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>General</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page OVW Installed Applications - Control RepeaterControl - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 2712471937 - Control 2961552353 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the name of the app you want to see the objects for.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page OVW Installed Applications - Control Name - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 2712471937 - Control 1772640682 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the publisher of the app you want to see the objects for.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page OVW Installed Applications - Control Publisher - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 2383488142 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Object Comparison</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page OVW Object Comparison - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 2383488142 - Control 1256520770 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the App Name.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page OVW Object Comparison - Control App Name - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 2383488142 - Control 3711240756 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the Object Number.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page OVW Object Comparison - Control Object ID - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 2383488142 - Control 1418569422 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the Object Name.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page OVW Object Comparison - Control Object Name - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 2383488142 - Control 1085746399 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the Object Type.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page OVW Object Comparison - Control Object Type - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 2383488142 - Control 2588654952 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the Origin.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page OVW Object Comparison - Control Origin - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 2389208843 - Property 2019332006" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Filters,Processing</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page OVW Object Viewer - Property PromotedActionCategories</note>
+        </trans-unit>
+        <trans-unit id="Page 2389208843 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Object Viewer</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page OVW Object Viewer - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 2389208843 - Method 613431046 - NamedType 4093306170" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Insufficient read permissions.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page OVW Object Viewer - Method GetAppPackageName - NamedType InsufficientReadPermissionsMsg</note>
+        </trans-unit>
+        <trans-unit id="Page 2389208843 - Method 613431046 - NamedType 3185093316" size-unit="char" translate="yes" xml:space="preserve">
+          <source>--- Unknown ---</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page OVW Object Viewer - Method GetAppPackageName - NamedType UnknownAppMsg</note>
+        </trans-unit>
+        <trans-unit id="Page 2389208843 - Control 2089899072 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the name of the name of the app that the object belongs to.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page OVW Object Viewer - Control App Package Name - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 2389208843 - Control 2089899072 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>App Name</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page OVW Object Viewer - Control App Package Name - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 2389208843 - Control 3811799877 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the language-specific caption of the object.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page OVW Object Viewer - Control Object Caption - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 2389208843 - Control 3711240756 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the ID of the object.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page OVW Object Viewer - Control Object ID - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 2389208843 - Control 1418569422 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the name of the object.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page OVW Object Viewer - Control Object Name - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 2389208843 - Control 3804014811 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the subtype of the object.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page OVW Object Viewer - Control Object Subtype - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 2389208843 - Control 1085746399 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the type of the object.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page OVW Object Viewer - Control Object Type - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 2389208843 - Control 1736541834 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the number of records in the table for the current company.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page OVW Object Viewer - Control RecordCount - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 2389208843 - Control 1736541834 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Record Count</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page OVW Object Viewer - Control RecordCount - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 2389208843 - Action 982123008 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Show Reports</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page OVW Object Viewer - Action RunReports - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 2389208843 - Action 580853590 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Show All</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page OVW Object Viewer - Action ShowAll - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 2389208843 - Action 2970465253 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Show Codeunits</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page OVW Object Viewer - Action ShowCodeunits - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 2389208843 - Action 1704337853 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Show Pages</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page OVW Object Viewer - Action ShowPages - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 2389208843 - Action 1247954626 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Show Tables</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page OVW Object Viewer - Action ShowTables - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 2389208843 - Action 1570166248 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Run Object</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page OVW Object Viewer - Action RunObject - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 3963626210 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Objects per App</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page OVW Objects per App - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 3963626210 - Control 2961552353 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the name of the extension.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page OVW Objects per App - Control Name - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 3963626210 - Control 852322270 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies how the app was published. This might affect the options you have for app management.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page OVW Objects per App - Control Published As - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 3963626210 - Control 1772640682 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the publisher of the app you want to see the objects for.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page OVW Objects per App - Control Publisher - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 3963626210 - Action 2817173203 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Opens the object comparison screen which enables you to import and compare objects of two different versions.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page OVW Objects per App - Action CompareObjects - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 3963626210 - Action 2817173203 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Compare Objects</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page OVW Objects per App - Action CompareObjects - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 3963626210 - Action 554893578 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Permission Sets</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page OVW Objects per App - Action PermissionsSetsGroup - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 3963626210 - Action 2694573974 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Generate a legacy permission set for this app. Legacy permission sets are used in Business Central versions up to and including Business Central 2020 release wave 2.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page OVW Objects per App - Action GeneratePermissionSet - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 3963626210 - Action 2694573974 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Generate Permission Set</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page OVW Objects per App - Action GeneratePermissionSet - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 3963626210 - Action 3573508754 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Generate a tenant permission set for this app. Tenant permission sets are used in Business Central 2021 release wave 1 and later versions.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page OVW Objects per App - Action GenerateTenantPermissionSet - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 3963626210 - Action 3573508754 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Generate Tenant Permission Set</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page OVW Objects per App - Action GenerateTenantPermissionSet - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="XmlPort 470812910 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Object Data I/O</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">XmlPort OVW Object Data I/O - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Enum 2127429110 - EnumValue 2402474825 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Generated</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Enum OVW Origin - EnumValue Generated - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Enum 2127429110 - EnumValue 281352744 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Imported</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Enum OVW Origin - EnumValue Imported - Property Caption</note>
+        </trans-unit>
+      </group>
+    </body>
+  </file>
+</xliff>

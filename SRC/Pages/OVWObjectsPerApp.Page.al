@@ -42,6 +42,18 @@ page 50131 "OVW Objects per App"
                 SubPageLink = "App Package ID" = field("Package Id");
             }
         }
+
+        area(FactBoxes)
+        {
+            part(DependsOn; "OVW Depends On - Factbox")
+            {
+                SubPageLink = "App Id" = field("App ID");
+            }
+            part(DependedOnBy; "OVW Depended On By - Factbox")
+            {
+                SubPageLink = "Dependent App Id" = field("App ID");
+            }
+        }
     }
 
     actions
@@ -95,4 +107,16 @@ page 50131 "OVW Objects per App"
             }
         }
     }
+
+    trigger OnOpenPage()
+    begin
+        InitDependencyTable();
+    end;
+
+    local procedure InitDependencyTable()
+    var
+        OVWDependencyManagement: Codeunit "OVW Dependency Management";
+    begin
+        OVWDependencyManagement.Run();
+    end;
 }
