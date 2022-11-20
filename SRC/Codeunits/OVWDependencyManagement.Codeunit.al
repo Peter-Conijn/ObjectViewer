@@ -24,7 +24,12 @@ codeunit 50137 "OVW Dependency Management"
     var
         ModuleDependencies: List of [ModuleDependencyInfo];
         ModuleDependency: ModuleDependencyInfo;
+        IsHandled: Boolean;
     begin
+        OnBeforeInitDependencyRecords(NAVAppInstalledApp, IsHandled);
+        if IsHandled then
+            exit;
+
         ModuleDependencies := GetDependencies(NAVAppInstalledApp);
         if ModuleDependencies.Count() = 0 then
             exit;
@@ -32,6 +37,8 @@ codeunit 50137 "OVW Dependency Management"
         foreach ModuleDependency in ModuleDependencies do begin
             InitDependencyRecord(NAVAppInstalledApp, ModuleDependency);
         end;
+
+        OnAfterInitDependencyRecords(NAVAppInstalledApp);
     end;
 
     local procedure InitDependencyRecord(NAVAppInstalledApp: Record "NAV App Installed App"; ModuleDependency: ModuleDependencyInfo)
@@ -45,6 +52,8 @@ codeunit 50137 "OVW Dependency Management"
         OVWAppDependencies."Dependent App Name" := ModuleDependency.Name;
         OVWAppDependencies."App Publisher" := NAVAppInstalledApp.Publisher;
         OVWAppDependencies."Dependent App Publisher" := ModuleDependency.Publisher;
+
+        OnBeforeInitDependencyRecord(NAVAppInstalledApp, ModuleDependency, OVWAppDependencies);
         OVWAppDependencies.Insert(true);
     end;
 
@@ -62,5 +71,20 @@ codeunit 50137 "OVW Dependency Management"
     begin
         if not OVWAppDependencies.IsEmpty() then
             OVWAppDependencies.DeleteAll(true);
+    end;
+
+    [IntegrationEvent(false, false)]
+    local procedure OnBeforeInitDependencyRecords(var NAVAppInstalledApp: Record "NAV App Installed App"; var IsHandled: Boolean)
+    begin
+    end;
+
+    [IntegrationEvent(false, false)]
+    local procedure OnAfterInitDependencyRecords(NAVAppInstalledApp: Record "NAV App Installed App")
+    begin
+    end;
+
+    [IntegrationEvent(false, false)]
+    local procedure OnBeforeInitDependencyRecord(NAVAppInstalledApp: Record "NAV App Installed App"; ModuleDependency: ModuleDependencyInfo; var OVWAppDependencies: Record "OVW App Dependency")
+    begin
     end;
 }
