@@ -80,6 +80,22 @@ page 50130 "OVW Object Viewer"
                     RunApplicationObject();
                 end;
             }
+
+            action(ExportToExcel)
+            {
+                ApplicationArea = All;
+                Caption = 'Export To Excel';
+                Image = Excel;
+                Promoted = true;
+                PromotedCategory = Process;
+                PromotedIsBig = true;
+                PromotedOnly = true;
+
+                trigger OnAction();
+                begin
+                    DoExportToExcel();
+                end;
+            }
         }
         area(Navigation)
         {
@@ -191,5 +207,16 @@ page 50130 "OVW Object Viewer"
         if ForObjectType <> Rec."Object Type"::Table then
             exit;
         exit(OVWRecordCountMgt.GetRecordCount(ForObjectID));
+    end;
+
+    local procedure DoExportToExcel()
+    var
+        OVWExporttoExcel: Codeunit "OVW Export to Excel";
+        NoTableErr: Label 'Export is only possible for object type Table';
+    begin
+        if Rec."Object Type" <> Rec."Object Type"::Table then
+            Error(NoTableErr);
+
+        OVWExporttoExcel.Rec2Excel(Rec."Object ID");
     end;
 }

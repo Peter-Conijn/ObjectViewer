@@ -333,6 +333,11 @@
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Page OVW Object Viewer - Property Caption</note>
         </trans-unit>
+        <trans-unit id="Page 2389208843 - Method 3021710581 - NamedType 3370973526" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Export is only possible for object type Table</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page OVW Object Viewer - Method DoExportToExcel - NamedType NoTableErr</note>
+        </trans-unit>
         <trans-unit id="Page 2389208843 - Method 613431046 - NamedType 4093306170" size-unit="char" translate="yes" xml:space="preserve">
           <source>Insufficient read permissions.</source>
           <note from="Developer" annotates="general" priority="2"></note>
@@ -413,6 +418,11 @@
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Page OVW Object Viewer - Action ShowTables - Property Caption</note>
         </trans-unit>
+        <trans-unit id="Page 2389208843 - Action 2851454604 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Export To Excel</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page OVW Object Viewer - Action ExportToExcel - Property Caption</note>
+        </trans-unit>
         <trans-unit id="Page 2389208843 - Action 1570166248 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Run Object</source>
           <note from="Developer" annotates="general" priority="2"></note>
@@ -477,6 +487,11 @@
           <source>Object Data I/O</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">XmlPort OVW Object Data I/O - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 1327980363 - Field 4271261664 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 2254553953">
+          <source>OVW Value is BLOB</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension OVW Excel Buffer - Field OVW Value is BLOB - Property Caption</note>
         </trans-unit>
         <trans-unit id="Enum 2127429110 - EnumValue 2402474825 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Generated</source>
