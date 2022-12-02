@@ -9,7 +9,9 @@ page 50130 "OVW Object Viewer"
     ModifyAllowed = false;
     DeleteAllowed = false;
     PromotedActionCategories = 'Filters,Processing';
-    SourceTableView = where("Object Type" = filter("Table" | "Page" | "Codeunit" | "Report"));
+    SourceTableView = where("Object Type" = filter("Table" | "Page" | "Codeunit" | "Report"),
+                            "Object ID" = filter(< 2000000000));
+    Permissions = tabledata AllObjWithCaption = r;
 
     layout
     {
