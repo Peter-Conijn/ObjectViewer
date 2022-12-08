@@ -67,6 +67,9 @@ page 50131 "OVW Objects per App"
                 Image = CompareCOA;
                 ToolTip = 'Opens the object comparison screen which enables you to import and compare objects of two different versions.';
                 Ellipsis = true;
+                ObsoleteState = Pending;
+                ObsoleteReason = 'This functionality has been marked as obsolete and will be removed. This warning will become an error in a later version.';
+                ObsoleteTag = '1.2';
                 RunObject = Page "OVW Compare Objects";
                 RunPageOnRec = true;
             }

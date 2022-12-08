@@ -4,6 +4,9 @@ page 50134 "OVW Compare Objects"
     Caption = 'Compare Objects';
     DataCaptionExpression = Rec.Name;
     SourceTable = "NAV App Installed App";
+    ObsoleteState = Pending;
+    ObsoleteReason = 'This functionality has been marked as obsolete and will be removed. This warning will become an error in a later version.';
+    ObsoleteTag = '1.2';
 
     layout
     {

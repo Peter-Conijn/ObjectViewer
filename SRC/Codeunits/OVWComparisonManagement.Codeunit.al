@@ -1,5 +1,10 @@
 codeunit 50132 "OVW Comparison Management"
 {
+    ObsoleteState = Pending;
+    ObsoleteReason = 'This functionality has been marked as obsolete and will be removed. This warning will become an error in a later version.';
+    ObsoleteTag = '1.2';
+
+    [Obsolete('This functionality has been marked as obsolete and will be removed. This warning will become an error in a later version.', '1.2')]
     internal procedure GenerateObjectData(PackageID: Guid; AppName: Text)
     var
         AllObj: Record AllObj;
@@ -13,6 +18,7 @@ codeunit 50132 "OVW Comparison Management"
         until AllObj.Next() = 0;
     end;
 
+    [Obsolete('This functionality has been marked as obsolete and will be removed. This warning will become an error in a later version.', '1.2')]
     internal procedure ExportData()
     var
         OVWObjectComparison: Record "OVW Object Comparison";
@@ -33,6 +39,7 @@ codeunit 50132 "OVW Comparison Management"
         DownloadFromStream(ReadStream, '', '', '', Destination);
     end;
 
+    [Obsolete('This functionality has been marked as obsolete and will be removed. This warning will become an error in a later version.', '1.2')]
     internal procedure ImportData()
     var
         OVWObjectComparison: Record "OVW Object Comparison";
@@ -51,6 +58,7 @@ codeunit 50132 "OVW Comparison Management"
         OVWObjectDataIO.Import();
     end;
 
+    [Obsolete('This functionality has been marked as obsolete and will be removed. This warning will become an error in a later version.', '1.2')]
     internal procedure GetNoOfObjects(OVWOrigin: Enum "OVW Origin"): Integer
     var
         OVWObjectComparison: Record "OVW Object Comparison";
@@ -59,6 +67,7 @@ codeunit 50132 "OVW Comparison Management"
         exit(OVWObjectComparison.Count());
     end;
 
+    [Obsolete('This functionality has been marked as obsolete and will be removed. This warning will become an error in a later version.', '1.2')]
     internal procedure RunComparison()
     var
         DialogTextLbl: Label 'Comparing objects...\Old->New: #1# of #2# \New -> Old: #3# of #4# ', Comment = '#1 = Current index existing; #2 = Total; #3 = Current index new; #4 = Total;';
