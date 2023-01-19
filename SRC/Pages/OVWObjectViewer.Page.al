@@ -87,11 +87,12 @@ page 50130 "OVW Object Viewer"
             {
                 ApplicationArea = All;
                 Caption = 'Export To Excel';
+                ToolTip = 'The records of this table will be exported to Excel';
                 Image = Excel;
                 Promoted = true;
                 PromotedCategory = Process;
-                PromotedIsBig = true;
                 PromotedOnly = true;
+                Enabled = Rec."Object Type" = Rec."Object Type"::Table;
 
                 trigger OnAction();
                 begin
@@ -219,6 +220,6 @@ page 50130 "OVW Object Viewer"
         if Rec."Object Type" <> Rec."Object Type"::Table then
             Error(NoTableErr);
 
-        OVWExporttoExcel.Rec2Excel(Rec."Object ID");
+        OVWExporttoExcel.ExportRecordToExcel(Rec."Object ID");
     end;
 }

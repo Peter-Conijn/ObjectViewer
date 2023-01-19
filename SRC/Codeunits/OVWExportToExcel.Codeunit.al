@@ -1,41 +1,37 @@
 codeunit 50138 "OVW Export to Excel"
 {
-    trigger OnRun()
-    begin
-
-    end;
-
-    procedure Rec2Excel(TableID: Integer)
+    internal procedure ExportRecordToExcel(TableID: Integer)
     var
         RecRef: RecordRef;
     begin
-        RecRef.Open(TableID);
+        if not TryOpenRecRef(RecRef, TableID) then
+            exit;
+
         if not RecRef.ReadPermission then
             exit;
 
         RowNo := 1;
-
         if RecRef.FindSet() then begin
             repeat
-                Ref2Excel(RecRef, TableID);
+                EXportRecordRefToExcel(RecRef, TableID);
             until RecRef.Next() = 0;
         end;
         TempExcelBuffer.CreateExcelBook(RecRef.Name); //change into table name?
     end;
 
-    local procedure Ref2Excel(var Ref: RecordRef; TableID: Integer)
+    local procedure EXportRecordRefToExcel(var Ref: RecordRef; TableID: Integer)
     var
-        int: Integer;
+        FieldIndex: Integer;
     begin
         ColumnNo := 1;
         RowNo += 1;
 
-        for int := 1 to Ref.FieldCount() do begin
-            fRef2Excel(Ref, int, TableID);
+        for FieldIndex := 1 to Ref.FieldCount() do begin
+            ExportFieldRefToExcel(Ref, FieldIndex, TableID);
         end;
     end;
 
-    local procedure fRef2Excel(var Ref: RecordRef; var i: Integer; TableID: Integer)
+    local procedure ExportFieldRefToExcel(var Ref: RecordRef; var i: Integer; TableID: Integer)
     var
         FRef: FieldRef;
     begin
@@ -55,6 +51,8 @@ codeunit 50138 "OVW Export to Excel"
                     FRef.CalcField();
                     TempExcelBuffer.AddCell(RowNo, ColumnNo, FRef.Value, FRef.Caption, 1);
                 end;
+            else
+                OnAfterAddCellWithFieldClass(RowNo, ColumnNo, FRef);
         end;
     end;
 
@@ -64,6 +62,17 @@ codeunit 50138 "OVW Export to Excel"
     begin
         if FieldRecord.Get(FRef.Record().Number, FRef.Number) then
             exit(FieldRecord.Enabled);
+    end;
+
+    [TryFunction]
+    local procedure TryOpenRecRef(RecRef: RecordRef; TableID: Integer)
+    begin
+        RecRef.Open(TableID);
+    end;
+
+    [IntegrationEvent(false, false)]
+    local procedure OnAfterAddCellWithFieldClass(RowNo: Integer; ColumnNo: Integer; FRef: FieldRef)
+    begin
     end;
 
     var

@@ -5,17 +5,19 @@ tableextension 50131 "OVW Excel Buffer" extends "Excel Buffer"
         field(50131; "OVW Value is BLOB"; Boolean)
         {
             DataClassification = SystemMetadata;
+            Caption = 'Value is BLOB';
         }
     }
 
-    procedure AddCell(pintRow: Integer; var pintColumn: Integer; pvarValue: Variant; ptxtHeading: Text[250]; pintColumnIncrement: Integer)
+    procedure AddCell(RowNo: Integer; var ColumnNo: Integer; CellValue: Variant; HeadingTxt: Text[250]; ColumnIncrement: Integer)
     begin
-        AddCellWithFormatting(pintRow, pintColumn, pvarValue, ptxtHeading, false, false, false, 2, pintColumnIncrement); //34764+-
+        AddCellWithFormatting(RowNo, ColumnNo, CellValue, HeadingTxt, false, false, false, 2, ColumnIncrement);
     end;
 
-    procedure AddCellWithFormatting(RowNo: Integer; var ColumnNo: Integer; CellValue: Variant; CellHeading: Text[250]; IsBold: Boolean; IsItalic: Boolean; IsUnderlined: Boolean; NumberOfDecimals: Integer; ColumnIncrementValue: Integer)
+    procedure AddCellWithFormatting(RowNo: Integer; var ColumnNo: Integer; CellValue: Variant; HeadingTxt: Text[250]; IsBold: Boolean; IsItalic: Boolean; IsUnderlined: Boolean; NumberOfDecimals: Integer; ColumnIncrement: Integer)
     var
-        DecimalNotation: Text;
+        ExcelBuffer: Record "Excel Buffer";
+        DecimalNotationTxt: Text;
     begin
         Init();
         Validate("Row No.", RowNo);
@@ -27,10 +29,10 @@ tableextension 50131 "OVW Excel Buffer" extends "Excel Buffer"
         Italic := IsItalic;
         Underline := IsUnderlined;
 
-        DecimalNotation := '#,##0';
+        DecimalNotationTxt := '#,##0';
         if NumberOfDecimals > 0 then begin
-            DecimalNotation += '.';
-            DecimalNotation := PadStr(DecimalNotation, StrLen(DecimalNotation) + NumberOfDecimals, '0');
+            DecimalNotationTxt += '.';
+            DecimalNotationTxt := PadStr(DecimalNotationTxt, StrLen(DecimalNotationTxt) + NumberOfDecimals, '0');
         end;
 
         case true of
@@ -42,7 +44,7 @@ tableextension 50131 "OVW Excel Buffer" extends "Excel Buffer"
                     NumberFormat := '0';
                     "Cell Type" := "Cell Type"::Number;
                     if CellValue.IsDecimal then
-                        NumberFormat := DecimalNotation;
+                        NumberFormat := DecimalNotationTxt;
                 end;
 
             CellValue.IsDate:
@@ -71,34 +73,24 @@ tableextension 50131 "OVW Excel Buffer" extends "Excel Buffer"
         end;
         if not "OVW Value is BLOB" then
             "Cell Value as Text" := Format(CellValue);
-        if not Insert() then
-            Modify();
-        AddHeading(ColumnNo, CellHeading);
-        ColumnNo += ColumnIncrementValue;
+
+        if not ExcelBuffer.Get(Rec."Row No.", Rec."Column No.") then
+            Rec.Insert()
+        else
+            Rec.Modify();
+
+        AddHeading(ColumnNo, HeadingTxt);
+        ColumnNo += ColumnIncrement;
     end;
 
-    [Obsolete('This procedure is no longer used and will be deprecated. This warning will become an error in the future.', '19.1.20220408')]
-    procedure AddFormula(pintRow: Integer; var pintColumn: Integer; ptxtFormula: Text[250]; ptxtHeading: Text[250]; pintColumnIncrement: Integer)
+    procedure AddHeading(ColumnNo: Integer; HeadingTxt: Text[250])
     begin
-        Init();
-        Validate("Row No.", pintRow);
-        Validate("Column No.", pintColumn);
-        "Cell Value as Text" := '';
-        Formula := ptxtFormula;
-        if not Insert() then
-            Modify();
-        AddHeading(pintColumn, ptxtHeading);
-        pintColumn += pintColumnIncrement;
+        AddHeadingAtRow(1, ColumnNo, HeadingTxt);
     end;
 
-    procedure AddHeading(pintColumn: Integer; ptxtHeading: Text[250])
+    procedure AddHeadingAtRow(RowNo: Integer; var ColumnNo: Integer; HeadingTxt: Text[250])
     begin
-        AddHeadingAtRow(1, pintColumn, ptxtHeading);
-    end;
-
-    procedure AddHeadingAtRow(RowNo: Integer; var ColumnNo: Integer; ColumnHeading: Text[250])
-    begin
-        IF ColumnHeading = '' THEN
+        IF HeadingTxt = '' THEN
             exit;
         if RowNo <> 1 then
             ColumnNo += 1;
@@ -107,46 +99,25 @@ tableextension 50131 "OVW Excel Buffer" extends "Excel Buffer"
         Init();
         Validate("Row No.", RowNo);
         Validate("Column No.", ColumnNo);
-        "Cell Value as Text" := ColumnHeading;
+        "Cell Value as Text" := HeadingTxt;
         Bold := true;
         "Cell Type" := "Cell Type"::Text;
         Insert();
     end;
 
-    procedure CreateExcelBook(SheetName: Text)
+    procedure CreateExcelBook(SheetNameTxt: Text)
     begin
-        CreateFile(SheetName);
+        CreateFile(SheetNameTxt);
     end;
 
-    procedure CreateFile(SheetName: Text)
+    procedure CreateFile(SheetNameTxt: Text)
     begin
-        CreateNewBook(SheetName);
-        WriteSheet(CopyStr(SheetName, 1, 80), CompanyName, UserId);
+        CreateNewBook(SheetNameTxt);
+        WriteSheet(CopyStr(SheetNameTxt, 1, 80), CompanyName, UserId);
         CloseBook();
         OpenExcel();
     end;
 
-    [Obsolete('This procedure is no longer used and will be deprecated. This warning will become an error in the future.', '19.1.20220408')]
-    procedure OnlyCreateFile(SheetName: Text; BookCreated: boolean)
-    var
-        FileName: text;
-    begin
-        ExcelBookCreated := BookCreated;
-        NewSheetName := SheetName;
-        if not BookCreated then
-            CreateNewBook(SheetName);
-
-        WriteSheet(CopyStr(SheetName, 1, 80), CompanyName, UserId);
-        if ExcelBookCreated then
-            SelectOrAddSheet(NewSheetName);
-    end;
-
-    procedure CreateFileWithoutOpening(ptxtSheetName: Text)
-    begin
-        CreateNewBook(ptxtSheetName);
-        WriteSheet(CopyStr(ptxtSheetName, 1, 80), CompanyName, UserId);
-        CloseBook();
-    end;
 
     procedure ConvertStringToBlob(Input: Text; var TempBlob: Codeunit "Temp Blob"): Integer
     var
