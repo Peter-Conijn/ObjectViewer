@@ -3,17 +3,17 @@
   "name": "PCO Object Viewer",
   "publisher": "Peter Conijn",
   "version": "1.2.0.1",
-  "brief": "",
-  "description": "",
-  "privacyStatement": "",
+  "brief": "A simple object viewer with some additional functions",
+  "description": "A simple object viewer with various views and an ability to run executable objects, and show the dependencies for apps.",
+  "privacyStatement": "https://github.com/Peter-Conijn/ObjectViewer/blob/master/PrivacyStatement.md",
   "EULA": "https://github.com/PeterConijn/ObjectViewer/blob/master/EULA.md",
   "help": "",
   "url": "https://github.com/PeterConijn/ObjectViewer",
   "logo": "",
   "dependencies": [],
   "screenshots": [],
-  "platform": "1.0.0.0",
-  "application": "19.0.0.0",
+  "platform": "21.0.0.0",
+  "application": "21.0.0.0",
   "idRanges": [
     {
       "from": 50130,
@@ -30,5 +30,5 @@
       "NoImplicitWith",
       "TranslationFile"
     ],
-  "runtime": "8.0"
+  "runtime": "10.0"
 }
