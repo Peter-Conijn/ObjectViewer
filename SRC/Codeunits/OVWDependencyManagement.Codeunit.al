@@ -1,7 +1,7 @@
 codeunit 50137 "OVW Dependency Management"
 {
-    Permissions = tabledata "NAV App Installed App" = r,
-                  tabledata "OVW App Dependency" = rimd;
+    Permissions = tabledata "NAV App Installed App" = R,
+                  tabledata "OVW App Dependency" = RIMD;
 
     trigger OnRun()
     begin
