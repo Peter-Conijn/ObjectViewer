@@ -4,6 +4,10 @@ table 50130 "OVW Object Comparison"
     Caption = 'Object Comparison';
     DrillDownPageId = "OVW Object Comparison";
     LookupPageId = "OVW Object Comparison";
+    ObsoleteState = Pending;
+    ObsoleteReason = 'This functionality has been marked as obsolete and will be removed. This warning will become an error in a later version.';
+    ObsoleteTag = '1.2';
+
 
     fields
     {
