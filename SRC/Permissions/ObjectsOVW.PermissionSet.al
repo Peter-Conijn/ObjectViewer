@@ -1,6 +1,8 @@
-permissionset 50130 GeneratedPermission
+permissionset 50130 "OVW - Objects"
 {
-    Assignable = true;
+    Assignable = false;
+    Access = Internal;
+
     Permissions = tabledata "OVW Object Comparison" = RIMD,
         table "OVW Object Comparison" = X,
         codeunit "OVW Comparison Management" = X,
@@ -20,5 +22,6 @@ permissionset 50130 GeneratedPermission
         codeunit "OVW Download Handler" = X,
         codeunit "OVW Tenant Perm. Set Generator" = X,
         page "OVW Depended On By - Factbox" = X,
-        page "OVW Depends On - Factbox" = X;
+        page "OVW Depends On - Factbox" = X,
+        codeunit "OVW Export to Excel" = X;
 }
