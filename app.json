@@ -29,6 +29,5 @@
     [
       "NoImplicitWith",
       "TranslationFile"
-    ],
-  "runtime": "10.0"
+    ]
 }
